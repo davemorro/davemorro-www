@@ -1,0 +1,14 @@
+extends layout
+
+block content
+
+    h1 David Morrison
+    each section in data.sections
+        h2= section.name
+        ul
+            each item in section.items
+                li
+                    if item.url
+                        a(href=item.url)= item.title
+                    else
+                        span.unavailable= item.title

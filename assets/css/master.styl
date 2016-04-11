@@ -1,0 +1,63 @@
+@import '_settings'
+
+normalize-css()
+base()
+
+html
+    height: auto;
+    min-height: 100%;
+
+body
+    margin: 25px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: radial-gradient(circle at 0% 0%, #085078, transparent 100%),radial-gradient(circle at 100% 100%, #85D8CE, transparent 100%),radial-gradient(circle at 100% 100%, #6f78c5, #6f78c5 100%);
+    font-size: 1em;
+    line-height: 1.7em;
+    text-align: left;
+    color: $default-color;
+    font-family: $font-stack;
+    text-shadow: 0 1px 1px rgba(0,0,0,.2);
+    -webkit-font-smoothing: antialiased;
+
+span.unavailable
+    text-shadow: none;
+    color: hsla(0,0%,100%,.6);
+
+a
+    text-decoration: none;
+    color: #fff;
+    
+ul
+    padding: 0;
+    margin: 0 0 1.7em 0; 
+
+ul li 
+    list-style-type: none;
+    margin: 0; 
+
+h1, h2
+    font-size: 1em;
+    margin: 0;
+    line-height: 1.7em;
+    color: $default-color;
+    text-shadow: 0 1px 2px rgba(0,0,0,.2);
+h1
+    font-weight: 700;
+h2
+    font-weight: 600;
+
+@font-face
+    font-family: "San Francisco";
+    font-weight: 400;
+    src: url("//applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+
+@font-face
+    font-family: "San Francisco";
+    font-weight: 600;
+    src: url("//applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff");
+
+@font-face
+  font-family: "San Francisco";
+  font-weight: 700;
+  src: url("//applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
