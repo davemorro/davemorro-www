@@ -2,12 +2,12 @@ extends layout
 
 block content
 
-    h1 David Morrison
+    h1.hidden David Morrison
     each section in data.sections
-        h2= section.name
+        h2.hidden= section.name
         ul
             each item in section.items
-                li
+                li.hidden
                     if item.url
                         a(href=item.url)= item.title
                     else

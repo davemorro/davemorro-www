@@ -1,5 +1,5 @@
 doctype html
-html(lang='en')
+html(lang='en', style='background: #72939c;')
     head
         title davemorro.
         meta(name='description', content='Co-founder, Awesome Co.')
@@ -14,7 +14,26 @@ html(lang='en')
         meta(property='og:title', content='David Morrison (davemorro)')
         meta(property='og:url', content='http://davemorro.com/')
         meta(property='og:description', content='Co-founder, Awesome Co.')
+        style.
+            body { background: -webkit-linear-gradient(top, rgba(0,0,0,0.4), transparent) }
     body
         block content
-    
         != css()
+        
+        
+    script.
+        var els = document.getElementsByClassName('hidden');
+        var i = 0;
+        
+        function setVisible(el) {
+            el.className = 'visible';
+            if (i < els.length) {
+                setTimeout(function() {
+                    setVisible(els[i]);
+                }, 40)
+            }
+        }
+        
+        setTimeout(function() {
+            setVisible(els[i]);
+        }, 400)
